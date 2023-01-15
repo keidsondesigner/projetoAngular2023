@@ -12,4 +12,8 @@ export class HelloComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    console.log('componente Hello destruido');
+  }
+
 }

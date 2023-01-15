@@ -1,1 +1,7 @@
-<app-hello></app-hello>
+<app-hello *ngIf="destruido"></app-hello>
+<button (click)="destruirComponent()">Destruir component</button>
+
+<input type="text" placeholder="Event Binding" (keyup)="alertaInfo($event)">
+<p>{{ valorAtual }}</p>
+
+<app-output [valor]="10" (mudouValor)="onMudouValor($event)"></app-output>
