@@ -1,0 +1,24 @@
+.active {
+  color: green;
+}
+
+.disabled {
+  color: red;
+}
+
+.container {
+  display: flex;
+
+  .value-item {
+    display: flex;
+    align-items: center;
+    margin-left: 9px;
+  }
+  .icon-hide {
+    display: block;
+    height: 18px;
+    width: 66px;
+    border-radius: 4px;
+    background-color: #d7d7d7;
+  }
+}

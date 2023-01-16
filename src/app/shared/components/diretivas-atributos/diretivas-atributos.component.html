@@ -1,0 +1,11 @@
+<p [ngClass]="{'active': iconToggle, 'disabled': !iconToggle}">NgClass</p>
+
+<div class="container">
+  <img class="icon-item" (click)="toggle()" [src]="iconToggle ? iconOn : iconOff">
+
+  <div class="value-item">
+    <p *ngIf="iconToggle">R$ 2.000</p>
+    <!-- <span *ngIf="!iconToggle">****</span> -->
+    <span class="icon-hide" *ngIf="!iconToggle"></span>
+  </div>
+</div>
