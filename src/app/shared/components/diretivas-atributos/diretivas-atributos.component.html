@@ -1,11 +1,11 @@
-<p [ngClass]="{'active': iconToggle, 'disabled': !iconToggle}">NgClass</p>
+<p [ngClass]="{'active': showBalance, 'disabled': !showBalance}">NgClass</p>
 
 <div class="container">
-  <img class="icon-item" (click)="toggle()" [src]="iconToggle ? iconOn : iconOff">
+  <img class="icon-item" (click)="handleToggleVisibleBalance()" [src]="showBalance ? iconOff : iconOn">
 
   <div class="value-item">
-    <p *ngIf="iconToggle">R$ 2.000</p>
+    <span *ngIf="showBalance">R$ 2.000</span>
     <!-- <span *ngIf="!iconToggle">****</span> -->
-    <span class="icon-hide" *ngIf="!iconToggle"></span>
+    <span class="icon-hide" *ngIf="!showBalance"></span>
   </div>
 </div>

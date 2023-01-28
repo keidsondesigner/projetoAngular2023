@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasAtributosComponent implements OnInit {
 
-  iconToggle: boolean = false;
+  showBalance: boolean = false;
 
   iconOn: string = 'assets/icons/eye-on.svg';
 
@@ -18,7 +18,7 @@ export class DiretivasAtributosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggle() {
-    this.iconToggle = !this.iconToggle;
+  handleToggleVisibleBalance() {
+    this.showBalance = !this.showBalance;
   }
 }
