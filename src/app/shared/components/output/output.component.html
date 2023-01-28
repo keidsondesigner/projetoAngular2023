@@ -3,3 +3,10 @@
   <input type="text" [value]="valor">
   <button (click)="incrementar()"> + </button>
 </div>
+
+<div *ngFor="let item of lista; let i = index">
+  <p>
+    {{ item.nome }} - {{ item.idade }}
+  </p>
+  <button (click)="getDados(i)">Enviar dados</button>
+</div>

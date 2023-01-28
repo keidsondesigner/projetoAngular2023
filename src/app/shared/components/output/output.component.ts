@@ -11,6 +11,20 @@ export class OutputComponent implements OnInit {
 
   @Output() mudouValor = new EventEmitter();
 
+  @Output() dadosEnviado = new EventEmitter();
+
+  lista: any[] = [
+    { nome: 'Keidson', idade: 29},
+    { nome: 'Karol', idade: 22},
+    { nome: 'Arthur', idade: 6}
+  ];
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
   incrementar(){
     this.valor++;
     this.mudouValor.emit({novoValor: this.valor});
@@ -21,9 +35,9 @@ export class OutputComponent implements OnInit {
     this.mudouValor.emit({novoValor: this.valor});
   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  getDados(event: number){
+    this.dadosEnviado.emit(this.lista[event]);
+    console.log('Dados enviado', this.lista[event])
   }
 
 }
