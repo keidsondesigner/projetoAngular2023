@@ -9,6 +9,8 @@ export class DiretivasAtributosComponent implements OnInit {
 
   showBalance: boolean = false;
 
+  valueBalance: string = '2.000';
+
   iconOn: string = 'assets/icons/eye-on.svg';
 
   iconOff: string = 'assets/icons/eye-off.svg';

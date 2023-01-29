@@ -9,12 +9,12 @@
 .container {
   display: flex;
 
-  .value-item {
+  .view-balance__container--text-balance {
     display: flex;
     align-items: center;
     margin-left: 9px;
   }
-  .icon-hide {
+  .view-balance__txt--value-balance-invisible {
     display: block;
     height: 18px;
     width: 66px;

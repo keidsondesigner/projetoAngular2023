@@ -1,11 +1,11 @@
 <p [ngClass]="{'active': showBalance, 'disabled': !showBalance}">NgClass</p>
 
 <div class="container">
-  <img class="icon-item" (click)="handleToggleVisibleBalance()" [src]="showBalance ? iconOff : iconOn">
+  <img [class]="'view-balance__icon--eye-' + (showBalance ? 'invisible' : 'visible')" (click)="handleToggleVisibleBalance()" [src]="showBalance ? iconOff : iconOn">
 
-  <div class="value-item">
-    <span *ngIf="showBalance">R$ 2.000</span>
-    <!-- <span *ngIf="!iconToggle">****</span> -->
-    <span class="icon-hide" *ngIf="!showBalance"></span>
+  <div class="view-balance__container--text-balance">
+    <span *ngIf="showBalance" class="view-balance__txt--value-balance">R$ {{ valueBalance }}</span>
+    <!-- <span *ngIf="!iconToggle" class="view-balance__txt--value-balance-invisible">****</span> -->
+    <span *ngIf="!showBalance" class="view-balance__txt--value-balance-invisible"></span>
   </div>
 </div>
